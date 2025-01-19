@@ -10,6 +10,7 @@ export default function Home() {
         alt="Sample Test Image"
         width={600} // Image width in pixels
         height={400} // Image height in pixels
+        loading="lazy" // Ensures lazy loading
       />
     </div>
   );
