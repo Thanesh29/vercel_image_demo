@@ -1,15 +1,14 @@
-function HomePage() {
+export default function Home() {
   return (
-    <div>
-      <h1>Welcome to My Next.js App</h1>
+    <div style={{ textAlign: 'center' }}>
+      <h1>Optimized Image Showcase</h1>
+      <p>Leveraging the <code>&lt;Image /&gt;</code> Component</p>
       <img
-        src="/example.jpg" // Replace with your image path
-        alt="Example Image"
-        width="500"
-        height="300"
+        src="/test_image.jpg"
+        alt="Test Image"
+        width="600"
+        height="400"
       />
     </div>
   );
 }
-
-export default HomePage;
