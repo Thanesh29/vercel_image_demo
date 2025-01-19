@@ -1,17 +1,34 @@
+import Head from 'next/head';
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
-      <h1>Optimized Image Showcase</h1>
-      <p>Leveraging the <code>&lt;Image /&gt;</code> Component</p>
-      <Image
-        src="/test_image.jpg" // Path to your image
-        alt="Sample Test Image"
-        width={600} // Image width in pixels
-        height={400} // Image height in pixels
-        loading="lazy" // Ensures lazy loading
-      />
+    <div>
+      <Head>
+        <title>Optimized Image Showcase</title>
+      </Head>
+
+      <main>
+        <h1>Welcome to the Optimized Image Showcase</h1>
+
+        {/* Example Image Without Size and Lazy Loading */}
+        <div>
+          <Image 
+            src="/path/to/your/image.jpg" 
+            alt="Sample Image"
+            // Notice there's no width and height specified here
+          />
+        </div>
+        
+        {/* Other images could be added in a similar manner */}
+        <div>
+          <Image 
+            src="/path/to/another-image.jpg" 
+            alt="Another Image"
+            // No size or lazy loading attributes here either
+          />
+        </div>
+      </main>
     </div>
   );
 }
